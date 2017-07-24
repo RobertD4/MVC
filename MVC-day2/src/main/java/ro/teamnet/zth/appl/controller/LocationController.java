@@ -5,6 +5,7 @@ import ro.teamnet.zth.api.annotations.Z2HRequestMethod;
 import ro.teamnet.zth.api.annotations.Z2HRequestParam;
 import ro.teamnet.zth.appl.domain.Location;
 import ro.teamnet.zth.appl.service.LocationService;
+import ro.teamnet.zth.appl.service.LocationServiceImpl;
 
 import java.util.List;
 
@@ -18,7 +19,11 @@ public class LocationController {
     }
 
     @Z2HRequestMethod(urlPath = "/one")
-    public Location getOne(@Z2HRequestParam(name = "id") Long locationId) {
+    public Location getOne(@Z2HRequestParam(name = "locationId") Long locationId) {
         return locationService.findOne(locationId);
+    }
+
+    public LocationController() {
+        locationService = new LocationServiceImpl();
     }
 }

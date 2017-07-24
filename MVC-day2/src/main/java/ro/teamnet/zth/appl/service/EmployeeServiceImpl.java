@@ -9,17 +9,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeDao employeeDao = new EmployeeDao();
 
-    @Override
+
     public List<Employee> findAllEmployees() {
         return employeeDao.getAllEmployees();
     }
 
-    @Override
+
     public Employee findOneEmployee(Long employeeId) {
         return employeeDao.getEmployeeById(employeeId);
     }
 
-    @Override
+
     public Boolean delete(Long employeeId) {
         Employee employeeToDelete = employeeDao.getEmployeeById(employeeId);
         if (employeeToDelete == null) {
@@ -29,12 +29,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         return true;
     }
 
-    @Override
+
     public Employee save(Employee employee) {
         return employeeDao.insertEmployee(employee);
     }
 
-    @Override
+
     public Employee update(Employee employee) {
         return employeeDao.updateEmployee(employee);
     }

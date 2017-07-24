@@ -4,9 +4,9 @@
 
 <div>
 
-    <form id="form1" name="hello" action="dispatch">
+    <form employeeId="form1" name="hello" action="dispatch">
         <label for="user">User:</label>
-        <input type="text" id="user" name="user"/>
+        <input type="text" employeeId="user" name="user"/>
     </form>
 
 </div>
